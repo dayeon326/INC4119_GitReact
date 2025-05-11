@@ -133,6 +133,21 @@
   border-radius: 20px;
 }
 
+/*Favorite 스타일*/
+.things ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.things li {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
 /* 프로젝트 페이지 스타일 */
 .project-grid {
   display: grid;

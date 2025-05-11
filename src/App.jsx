@@ -7,6 +7,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import CalculatePage from "./pages/CaculatePage";
 
 const App = () => {
   // 로그인 상태를 관리하는 state
@@ -31,11 +32,14 @@ const App = () => {
       case "about":
         return <AboutPage />;
       case "projects":
-        return <ProjectsPage />;
+        return <ProjectsPage setCurrentPage={setCurrentPage} />;
       case "contact":
         return <ContactPage />;
       default:
         return <HomePage />;
+      case "calculate":
+        return <CalculatePage />;
+    // 계산기 페이지 추가
     }
   };
 

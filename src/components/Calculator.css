@@ -1,0 +1,73 @@
+.calculator-container {
+    text-align: center;
+  }
+  
+  /* operator button을 파란색으로 바꿈 */
+  .calculator-container .operator-button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin: 4px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .calculator-container .operator-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 각 버튼 줄을 가로 정렬하기 위한 행 스타일 */
+  .calculator-container .button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  
+  /* 일반 버튼 스타일 */
+  .calculator-container button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    margin: 4px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .calculator-container button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* special button을 빨간색 */
+  .calculator-container .special-button {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin: 4px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .calculator-container .special-button:hover {
+    background-color: darkred;
+  }
+  
+  /* display 화면을 검은 네모칸으로 바꿈 */
+  .calculator-container .display {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 8px;
+    font-size: 24px;
+    text-align: right;
+    line-height: 1.5;
+  }
+  
