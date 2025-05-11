@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import CalculatePage from "./pages/CaculatePage";
+import LikePage from "./pages/LikePage";// 취향 페이지 추가
 
 const App = () => {
   // 로그인 상태를 관리하는 state
@@ -27,18 +28,21 @@ const App = () => {
   // 페이지 렌더링 함수
   const renderPage = () => {
     switch (currentPage) {
+      case "like":
+        return <LikePage setCurrentPage={setCurrentPage}/>;
+      // 취향 페이지 추가
       case "home":
-        return <HomePage />;
+        return <HomePage setCurrentPage={setCurrentPage}/>;
       case "about":
-        return <AboutPage />;
+        return <AboutPage setCurrentPage={setCurrentPage}/>;
       case "projects":
         return <ProjectsPage setCurrentPage={setCurrentPage} />;
       case "contact":
-        return <ContactPage />;
+        return <ContactPage setCurrentPage={setCurrentPage}/>;
       default:
-        return <HomePage />;
+        return <HomePage setCurrentPage={setCurrentPage}/>;
       case "calculate":
-        return <CalculatePage />;
+        return <CalculatePage setCurrentPage={setCurrentPage}/>;
     // 계산기 페이지 추가
     }
   };

@@ -1,7 +1,7 @@
 import React from "react";
 import FeatureCard from "../components/FeatureCard";
 
-const HomePage = () => {
+const HomePage = ({setCurrentPage}) => {
   const features = [
     {
       title: "소개",
@@ -17,9 +17,10 @@ const HomePage = () => {
     },
     {
       title: "취향",
-      description: "저의 취향인 것들을 모아둔 페이지 입니다.",
+      description: "저의 취향의 것들을 모아둔 페이지 입니다.",
     },
   ];
+//내가 원하는 페이지(취향 페이지) 추가
 
   return (
     <div className="home-container">
@@ -31,6 +32,7 @@ const HomePage = () => {
             key={index}
             title={feature.title}
             description={feature.description}
+            onClick={() => setCurrentPage(feature.page)}
           />
         ))}
       </div>
